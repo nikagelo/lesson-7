@@ -1,3 +1,65 @@
+.background {
+  position: relative;
+  background-image: url(../img/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  position: absolute;
+  font-size: 30px;
+  color: red;
+  margin: 0 auto;
+}
+.cars {
+  height: 1000px;
+  display: inline-block;
+  align-items: baseline;
+}
 .img {
+  vertical-align: middle;
+}
+.left {
+  position: absolute;
+  display: inline-block;
   width: 300px;
+  animation-name: moveL;
+  animation-duration: 3s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes moveL {
+  from {
+    top: 70%;
+    left: 0;
+  }
+  to {
+    top: 70%;
+    left: 40%;
+  }
+}
+.right {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  animation-name: moveR;
+  animation-duration: 3s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes moveR {
+  0% {
+    top: 80%;
+    left: 85%;
+  }
+  99% {
+    top: 80%;
+    left: 54%;
+  }
+  100% {
+    top: 80%;
+    left: 55%;
+    background-image: url(../img/fireR.svg);
+  }
 }
